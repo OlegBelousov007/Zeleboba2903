@@ -190,7 +190,6 @@ fun Screen1() {
                 }
             }
             Column {
-
                 Card(
                     modifier = Modifier
                         .padding(10.dp)
@@ -220,6 +219,16 @@ fun Screen1() {
                     }
                 }
             }
+        }
+        Row(modifier = Modifier
+            .padding(15.dp, 20.dp, 0.dp, 0.dp)) {
+            Text(text = "Recommended", fontWeight = FontWeight.Black, fontSize = 24.sp)
+        }
+        Row(modifier = Modifier
+            .padding(15.dp, 20.dp, 0.dp, 0.dp)) {
+                Card {
+
+                }
         }
 
     }
