@@ -3,7 +3,6 @@ package com.example.zeleboba2903.ui.theme.bottom_navigation
 import androidx.compose.foundation.background
 import androidx.compose.material3.Icon
 import androidx.compose.material3.NavigationBar
-import androidx.compose.material3.NavigationBarDefaults
 import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.NavigationBarItemDefaults
 import androidx.compose.material3.Text
@@ -18,7 +17,7 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 
 
 @Composable
-fun BottomNAvigation(
+fun BottomNavigation(
     navController: NavController
 ) {
     val listItems = listOf(
