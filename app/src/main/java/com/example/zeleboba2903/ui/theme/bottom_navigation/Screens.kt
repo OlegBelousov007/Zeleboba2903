@@ -38,6 +38,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.PasswordVisualTransformation
@@ -224,11 +225,44 @@ fun Screen1() {
             .padding(15.dp, 20.dp, 0.dp, 0.dp)) {
             Text(text = "Recommended", fontWeight = FontWeight.Black, fontSize = 24.sp)
         }
-        Row(modifier = Modifier
-            .padding(15.dp, 20.dp, 0.dp, 0.dp)) {
-                Card {
+        Column {
+            Row(modifier = Modifier
+                .padding(15.dp, 20.dp, 0.dp, 0.dp)) {
+                Card(
+                    modifier = Modifier
+                        .padding(start = 5.dp, top = 5.dp, end = 5.dp)
+                        .width(350.dp)
+                        .height(350.dp)
+                        .background(Color.White)
+                        .clickable {
+                        }) {
+                    Box(
+                        modifier = Modifier
+                            .fillMaxSize()
+                    ) {
+                        Row(modifier = Modifier
+                            .padding(5.dp)
+                        ) {
+                            Text(text = "Recipe", fontWeight = FontWeight.Bold)
+                        }
+                        Row(
+                            modifier = Modifier
+                                .fillMaxSize(),
+                            verticalAlignment = Alignment.Top,
+                            horizontalArrangement = Arrangement.Center
+                        ) {
+                            Image(
+                                painter = painterResource(id = R.drawable.torti),
+                                contentDescription = "image",
+                                modifier = Modifier
+                                    .width(200.dp)
+                                    .height(200.dp)
+                            )
+                        }
 
+                    }
                 }
+            }
         }
 
     }
@@ -257,6 +291,7 @@ fun Screen2() {
                         verticalAlignment = Alignment.CenterVertically,
                         horizontalArrangement = Arrangement.SpaceBetween
                     ) {
+
                         Image(
                             painter = painterResource(id = R.drawable.sirnic),
                             contentDescription = "image",
@@ -264,6 +299,14 @@ fun Screen2() {
                                 .width(180.dp)
                                 .height(180.dp)
                         )
+                        Button(modifier = Modifier
+                            .width(10.dp)
+                            .height(10.dp)
+                            .background(Color.Red)
+                            .padding(start = 1.dp, top = 1.dp),
+                            onClick = {}) {
+
+                        }
                     }
                 }
             }
